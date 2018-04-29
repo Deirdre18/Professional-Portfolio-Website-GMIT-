@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+.item-complex{
+  padding-right: 0 !important;
+}
+
+#saveNewItem {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#tab-main-total {
+	float: left;
+}
+
+/*This styles the table*/
+table {
+	border: double;
+	padding: 30px;
+}
+
+tr {
+	border: solid;
+	border-width: thick;
+}
+
+th {
+  font-family: sans-serif;
+  font: bold;
+	border: solid;
+	border-width: thick;;
+	padding: 5px;
+}
+
+td {
+	border: solid;
+	border-width: thick;
+	text-align: center;
+	vertical-align: middle;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script>
+		function check(){
+			var txt="";
+			var fullname="";
+			
+			fullname=document.fullname.firstName.value + " " + document.fullname.lastName.value;
+			txt="User is "+fullname + ".";
+			document.getElementById("output").innerHTML=txt;
+			
+			// or you could just set output as follows:
+			// document.getElementById("output").innerHTML = "User is " + document.fullname.firstName.value + " " + document.fullname.lastName.value + ".";
+		}
+	</script>
+</head>
+
+<body> 
+	<h1>Welcome to Forms exercise</h1>
+
+	<p>Working with forms</p>
+
+	<form name="fullname">
+		First Name: <input type="text" name="firstName">
+		<br/><br/>
+		Last Name: &nbsp;<input type="text" name="lastName">
+	</form>
+	<br/>
+	<form name="pwd">
+		Password: &nbsp;&nbsp;<input type="password" name="pwd">
+	</form>
+	<br/>
+	<br/>
+	<form name="radio_btn">
+		<input type="radio" name="gender" value="female">Female<br>
+		<input type="radio" name="gender" value="male">Male		
+	</form>
+	<br/>
+	<form name="checkboxes">
+		<input type="checkbox" name="vehicle" value="bike">I have a bike<br>
+		<input type="checkbox" name="vehicle" value="car">I have a car
+	</form>
+	<br/>
+	<form name="input" action="" method="get">
+		Username: <input type="text" name="name">
+		<br/><br/>
+		<input type="button" onclick="check()" value="Submit">	
+		<br/><br/>
+		<p id="output"></p>		
+	</form>
+
+</body>
+
+</html>

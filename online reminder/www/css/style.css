@@ -1,0 +1,17 @@
+.item-head{
+	background-color: pink;
+}
+
+.item-body{
+	background-color: #eee;
+}
+
+#input-box{
+	width: 50%;
+    outline:solid 1px silver;
+}
+
+#desc-box{
+	width: 100%;
+    outline:solid 1px silver;
+}

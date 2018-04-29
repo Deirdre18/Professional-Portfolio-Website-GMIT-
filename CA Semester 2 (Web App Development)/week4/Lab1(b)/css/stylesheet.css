@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+  background-color: #000;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0; 
+  padding: 0;}
+
+#page {
+  background-color: #403c3b;
+  margin: 0 auto 0 auto;}
+  /* Responsive page rules at bottom of style sheet */
+
+h1 {
+  background-image: url(../images/kinglogo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  text-indent: -1000%;
+  height: 75px;
+  line-height: 75px;
+  width: 117px;
+  margin: 0 auto 0 auto;
+  padding: 30px 10px 20px 10px;}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 0 0 23px 0;}
+
+/* Form styles */
+
+form {
+  padding: 0 60px 65px 60px;}
+
+label {
+  color: #fff;
+  display: block;
+  margin: 10px 0 10px 0;
+  font-size: 24px;}
+
+input[type='text'], input[type='password'], textarea {
+  background-color: #999;
+  color: #666;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  font-size: 24px;
+  width: 96%;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  border-radius: 8px;}
+
+input[type='text']:focus, input[type='password']:focus, textarea:focus {
+  border: 1px solid #fff;
+  background-color: #fff;
+  outline: none;}
+
+input[type='submit'], a.add {
+  background-color: #cb6868;
+  color: #f3dad1;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-top: 10px;
+  float: right;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;}
+
+input[type='submit']:hover, a.add:hover {
+  background-color: #d75359;
+  color: #f3dad1;
+  cursor: pointer;
+  box-shadow: none;
+  position: relative;
+  top: 1px;}
+
+#feedback {
+  color: #fff;
+  background-image: url('../images/warning.png');
+  background-repeat: no-repeat;
+  background-position: 2px 14px;
+  padding: 10px 0 0 22px;}
+
+#feedback.warning {background-image: url('../images/warning.png');}
+/*#feedback.tip {background-image: url('../images/tip.png');}
+
+
+/* Small screen - acts like the app would */
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #403c3b;
+  }
+  #page {
+    max-width: 480px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+/* Larger screens act like a demo for the app */
+@media only screen and (min-width: 960px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  h1{
+    background-image: url(../images/2xkinglogo.png);
+    background-size: 72px 72px;
+  }
+}

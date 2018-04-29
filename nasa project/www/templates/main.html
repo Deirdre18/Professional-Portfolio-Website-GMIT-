@@ -1,0 +1,27 @@
+<!--
+	Template for the main page view
+	Uses the MainCtrl controller
+	Has a header with the title of the page and a link to the settings page
+	Ion-content with the ID main_body is the container for the data created
+	in the MainCtrl
+-->
+<ion-view ng-controller="MainCtrl">
+	<div class="bar bar-header bar-stable">
+		<a class="button icon-left ion-chevron-left button-clear button-dark header_button" ng-href="#/settings">Settings</a>
+		 <h1 class="title">NASA Picture of the Day</h1>
+	</div>
+
+	<!--The has-header class prevents overlap between the header and page content-->
+	<ion-content class="has-header" id="main_Body">
+		<ion-list ng-repeat="x in returnedData">
+			<ion-item class="frame">
+				<p class="tdstyle">{{x.title}}</p>
+				<p class="tdstyle">{{x.date}}</p>
+				<p class="exstyle">{{x.explanation}}</p>
+				<p>
+					<img src={{x.url}}></img>
+				</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

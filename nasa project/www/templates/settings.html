@@ -1,0 +1,29 @@
+<!--
+	Template for the main page view
+	Uses the SettingsCtrl controller
+	Has a header with the title of the page and a link to the main page
+	Ion-content has a list which includes a radio button list
+-->
+<ion-view ng-controller="SettingsCtrl">
+	<div class="bar bar-header bar-stable">
+		<a class="button icon-left ion-chevron-left button-clear button-dark header_button" ng-href="#/main">NASA Picture of the Day</a>
+		 <h1 class="title">Settings</h1>
+	</div>
+	<!--The has-header class prevents overlap between the header and page content-->
+	<ion-content class="has-header">
+		<div class="list">
+	  		<div class="item item-divider">
+	    		<b>Show Pictures From:</b>
+	  		</div>
+	  		<!--
+				Radio buttons are used to choose how many sets of data are to be
+				requested and shown in the main page
+	  		-->
+	  		<ion-item>
+				<ion-radio ng-model="choice" ng-value="1">Today</ion-radio>
+		  		<ion-radio ng-model="choice" ng-value="7">Last 7 Days</ion-radio>
+		  		<ion-radio ng-model="choice" ng-value="14">Last 14 Days</ion-radio>
+	  		</ion-item>
+	  	</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+/*Make the header link stay on the left of the header*/
+.header_button{
+	float: left;
+}
+
+.frame{
+	background-color: lightblue;
+}
+
+p.tdstyle{
+	color: blue;
+}
+
+p.exstyle{
+	white-space: pre-wrap;
+}

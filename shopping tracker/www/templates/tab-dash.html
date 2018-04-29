@@ -1,0 +1,51 @@
+<ion-view title="Calculator" hide-back-button="true"  type="text/ng-template">
+  <ion-header-bar>
+    <label id="tab-main-total">Total: € </label><div id="total">0.00</div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list can-swipe="true">
+      <ion-item class = "item-avatar item-button-right">
+        <img src="img/1LMilk.jpg">
+        <h4>Milk (1L)</h4>
+        <button id="milk1l" class="button button-positive" onclick="total(this)">€0.75</button>
+        <ion-option-button id="milk1l" class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="milk1l" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+      <ion-item class = "item-avatar item-button-right" href="#">
+        <img src="img/2LMilk.jpg">
+        <h4>Milk (2L)</h4>
+        <button id="milk2l" class="button button-positive" onclick="total(this)" >€1.45</button>
+        <ion-option-button id="milk2l" class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="milk2l" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+      <ion-item class = "item-avatar item-button-right" href="#">
+        <img src="img/breadWH.jpg">
+        <h4>Bread White</h4>
+        <button id="breadWH" class="button button-positive" onClick="total(this)" val=0 >€0.70</button>
+        <ion-option-button id="breadWH" class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="breadWH" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+      <ion-item class = "item-avatar item-button-right" href="#">
+        <img src="img/breadBR.jpg">
+        <h4>Bread Brown</h4>
+        <button id="breadBR" class="button button-positive" onclick="total(this)"val=0 >€0.85</button>
+        <ion-option-button id="breadBR"class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="breadBR" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+      <ion-item class = "item-avatar item-button-right" href="#">
+        <img src="img/breadGR.jpg">
+        <h4>Bread Granary</h4>
+        <button id="breadGR" class="button button-positive" onclick="total(this)" val=0 >€1.00</button>
+        <ion-option-button id="breadGR" class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="breadGR" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+      <ion-item class = "item-avatar item-button-right" href="#">
+        <img src="img/Barrys.jpg">
+        <h4>Tea Bags</h4>
+        <button id="tBags" class="button button-positive" onclick="total(this)" val=0 >€3.10</button>
+        <ion-option-button id="tBags" class="button-dark icon ion-minus-round" onclick="reduce(this)"></ion-option-button>
+        <ion-option-button id="tBags" class="button-assertive icon ion-pricetag" onclick="change(this)"></ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+html {
+    height: 100%;}
+
+body {
+    background-color: #b6a996;
+    background: url('../images/hobart.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover; /*Furhter Details on background properties: https://css-tricks.com/perfect-full-page-background-image/*/
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100%;}
+
+#content {
+    background-color: #fff;
+    border: 3px double #31373f;
+    color: #31373f;
+    display: inline-block;
+    padding: 30px 50px;
+    margin: 20px auto 50px auto;
+    max-width: 580px;
+    min-height: 4em;
+    overflow: auto;
+    text-align: center;}
+
+h1 {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 278px;
+    height: 112px;
+    margin: 0 auto 0 auto;
+    padding-top: 40px;
+    background: url('../images/elderflower-logo.png') no-repeat bottom center;}
+
+.action {
+    background-color: #f84c53;
+    color: #fff;
+    width: auto;
+    height: 1em;
+    padding: 0.5em 0.75em;
+    float: right;
+    position: relative;
+    top: 1.3em;
+    right: -2.3em;}
+
+a {
+    color: #e3bb5a;
+    text-decoration:none;}
+
+.message {
+    font-weight: bold;
+    line-height: 1.5em;
+    height: 2em;
+    display: block;
+    clear: left;
+    min-width: 10em;}
+
+table {
+    margin: 20px 100px 0 100px;}
+
+tr td:first-child {
+    font-weight: bold;
+    padding-right: 20px;}
+	
+body {
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;}

@@ -1,0 +1,43 @@
+<ion-view ng-controller="mainCtrl">
+	<ion-pane>
+	    <ion-header-bar class="bar-royal">
+	        <h1 class="title">{{reminder.titleText}}</h1>
+	    </ion-header-bar>
+	    <ion-content class="has-header">
+			<ion-item class="item-head">
+				<h2>Title</h2>
+			</ion-item>
+			<ion-item class="item-body">
+				<input type="text" ng-model='reminder.titleText' id="input-box">
+			</ion-item>
+			<ion-item class="item-head">
+				<h2>Description</h2>
+			</ion-item>
+			<ion-item class="item-body">
+				<textarea rows="5" ng-model='reminder.descText' ng-value="" id="desc-box"></textarea>
+			</ion-item>
+			<ion-item class="item-head">
+				<h2>Priority</h2>
+			</ion-item>
+			<span radio-group class="item-body">
+				<ion-radio ng-model='reminder.priority' ng-value='1'>High</ion-radio>
+				<ion-radio ng-model='reminder.priority' ng-value='2'>Medium</ion-radio>
+				<ion-radio ng-model='reminder.priority' ng-value='3'>Low</ion-radio>
+			</span>
+			<ion-item class="item-head">
+				<h2>Complete</h2>
+			</ion-item>
+			<ion-toggle class="item-body" ng-model="reminder.complete">Complete</ion-toggle>
+
+			<!-- Show save button if there is no saved myjsonblobID, otherwise show update and delete buttons -->
+
+			<ion-item ng-if="haveID==false">
+				<button class="button button-royal large round" ng-click="createmyjsonblob()">Save</button>
+			</ion-item>
+			<ion-item ng-if="haveID==true">
+				<button class="button button-royal large round" ng-click="updatemyjsonblob()">Update</button>
+				<button class="button button-royal large round" ng-click="deletemyjsonblob()">Delete</button>
+			</ion-item>
+	    </ion-content>
+	</ion-pane>
+</ion-view>

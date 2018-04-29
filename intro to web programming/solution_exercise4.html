@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script>
+		function check(){
+			var txt="";
+			var fullname="";
+			
+			/*Full name of user*/
+			if(document.fullname.firstName.value && document.fullname.lastName.value){
+				fullname=document.fullname.firstName.value + " " + document.fullname.lastName.value;
+			}
+			else if(document.fullname.firstName.value){
+				fullname=document.fullname.firstName.value;
+			}
+			else if (document.fullname.lastName.value){
+				fullname=document.fullname.lastName.value
+			}
+			if(fullname){
+				txt="User is "+fullname + ". ";
+			}
+			
+			/*Gender*/
+			var gender=document.radio_btn.gender.value;
+			if(gender){
+				txt=txt+"Gender of user is: "+document.radio_btn.gender.value+". ";
+			}
+			
+			/*checkboxes*/	
+			var chktxt="";
+			var vehicle=document.checkboxes.vehicle;
+			for (i=0; i<vehicle.length; ++ i)
+			{	
+				if (vehicle[i].checked)
+				{
+					if(i==0)
+						chktxt=chktxt + vehicle[i].value;
+					else{
+						if(chktxt)
+							chktxt=chktxt + " and " + vehicle[i].value;
+						else
+							chktxt=chktxt + vehicle[i].value;
+					}
+				}
+			}
+			if(chktxt){
+				chktxt="User has the following vehicles: "+chktxt;
+				txt=txt+" "+chktxt+". "; 
+			}
+			
+			/*username*/
+			var username=document.input.name.value;
+			if(username){
+				txt=txt+" Username is: "+username+". ";
+			}
+			
+			/*password*/
+			if(document.pwd.pwd.value=="kevin"){
+				if(txt){
+					document.getElementById("output").innerHTML=txt;
+				}
+				else{
+					document.getElementById("output").innerHTML="User only provided password and no other details."
+				}	
+			}
+			else{
+				document.getElementById("output").innerHTML="";
+				alert("Invalid password. Please try again");
+			}
+		}
+	</script>
+</head>
+
+<body> 
+	<h1>Welcome to Forms exercise</h1>
+
+	<p>Working with forms</p>
+
+	<form name="fullname">
+		First Name: <input type="text" name="firstName">
+		<br/><br/>
+		Last Name: &nbsp;<input type="text" name="lastName">
+	</form>
+	<br/>
+	<form name="pwd">
+		Password: &nbsp;&nbsp;<input type="password" name="pwd">
+	</form>
+	<br/>
+	<br/>
+	<form name="radio_btn">
+		<input type="radio" name="gender" value="female">Female<br>
+		<input type="radio" name="gender" value="male">Male		
+	</form>
+	<br/>
+	<form name="checkboxes">
+		<input type="checkbox" name="vehicle" value="bike">I have a bike<br>
+		<input type="checkbox" name="vehicle" value="car">I have a car
+	</form>
+	<br/>
+	<form name="input" action="" method="get">
+		Username: <input type="text" name="name">
+		<br/><br/>
+		<input type="button" onclick="check()" value="Submit">	
+		<br/><br/>
+		<p id="output"></p>		
+	</form>
+
+</body>
+
+</html>

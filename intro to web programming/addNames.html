@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add names</title>
+</head>
+
+<body>
+	<form name="name_form" action="nameList.html">
+		<table>
+			<tr><td>First Name:</td> <td><input type="text" width="50" name="fname" id="fld1"/></td></tr>
+			<tr><td>Surname:</td> <td><input type="text" width="50" name="lname" id="fld2"/></td></tr>
+		</table>
+		<br>
+		<button id="b1" onclick="add()" type="button">Add</button>
+		<button id="b2" onclick="clear_storage()" type="button">Clear Storage</button><br><br>
+		<input type="submit" value="Go To Name List">
+	</form>
+	<script src="js/addNames.js" defer></script>
+</body>
+</html>
